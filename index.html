@@ -79,16 +79,16 @@
             }
             if (sum%2==0){
               document.getElementById('content').style="background-image:url(yes.png); background-color:green;";
-	      setText("DE E FAN VÄRT!");
+	      setText("DE E FAN VÃ„RT!");
               type=1;
             }else if (sum%2==1){
               document.getElementById('content').style="background-image:url(no.png); background-color:red;";
-	      setText("INTE VÄRT!");
+	      setText("INTE VÃ„RT!");
               type=2;
             }
             if (string=="420"){
 	      document.getElementById('content').style="background-image:url(snoop.png); background-color:red;";
-	      setText("SMÖGA GRÄS!");
+	      setText("SMÃ–GA GRÃ„S!");
             }else if (string=="lexby"||string=="Lexby"||string=="noob"||string=="n00b"){
 	      document.getElementById('content').style="background-image:url(lexby.png); background-color:red;";
 	      setText("N00B #1");
@@ -99,8 +99,8 @@
        }
     function reset(){
 	document.getElementById('content').style="background-image:url(thinking.png); background-color:white;";
-        document.getElementById('content').title="E DE VÄRT?";
-        document.getElementById('frameStyle').innerHTML="E DE VÄRT?";
+        document.getElementById('content').title="E DE VÃ„RT?";
+        document.getElementById('frameStyle').innerHTML="E DE VÃ„RT?";
     }
     function setText(str){
         document.getElementById('frameStyle').title=str;
@@ -115,8 +115,8 @@
   </script>
 
   <body id="background">
-    <input id="textField" type="text" spellcheck="false" value="E de värt?" onkeypress="vart(event)"></input>
+    <input id="textField" type="text" spellcheck="false" value="E de vÃ¤rt?" onkeypress="vart(event)"></input>
     <frameContent id="content"></frameContent>
-    <fme id="frameStyle" title="E DE VÄRT?">E DE VÄRT?</fme>
+    <fme id="frameStyle" title="E DE VÃ„RT?">E DE VÃ„RT?</fme>
   </body>
 </html>
