@@ -76,6 +76,7 @@
   
   <script>
     function cross(){
+      document.getElementById("sound").play();
       document.getElementById("infobox").style.display="none";
       document.getElementById("shade").style.display="none";
       document.getElementById("countdown").style.top="100%";
@@ -89,6 +90,7 @@
     
     
   <body id="body">
+    <audio id="sound" loop src="soundtrack.mp3" type="audio/mpeg"></audio>
     <grass id="grass" style="background-image:url(grass.png)"></grass>
     <div id="countdown">3</div>
     <div id="countdown2">2</div>
