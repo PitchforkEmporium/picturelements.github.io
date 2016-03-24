@@ -57,11 +57,15 @@
       z-index: 1000;
     }
     
+    #countdown{
+      transition: 1s cubic-bezier(0, 0.9, 1, 0.1);
+    }
   </style>
   
   <script>
     function cross(){
       document.getElementById("infobox").style.display="none";
+      document.getElementById("shade").style.display="none";
     }
   </script>
     
@@ -73,5 +77,6 @@
     <div id="infobox">
       <div id="cross" onclick=cross()>✕</div>
     </div>
+    <div id="countdown">3</div>
   </body>
 </html>
