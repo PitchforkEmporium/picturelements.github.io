@@ -79,14 +79,11 @@
       document.getElementById("infobox").style.display="none";
       document.getElementById("shade").style.display="none";
       document.getElementById("countdown").style.top="100%";
-      setTimeout(two,1000);
-    }
-    function two(){
-      document.getElementById("countdown").style.transition="none";
-      document.getElementById("countdown").style.top="0%";
-      document.getElementById("countdown").innerHTML="2";
-      document.getElementById("countdown").style.transition="1s cubic-bezier(0, 0.9, 1, 0.1)";
-      document.getElementById("countdown").style.top="100%";
+      document.getElementById("countdown2").style.top="100%";
+      document.getElementById("countdown3").style.top="100%";
+      document.getElementById("countdown").style.transitionDelay="0.5s";
+      document.getElementById("countdown").style.transitionDelay="1.5s";
+      document.getElementById("countdown").style.transitionDelay="2.5s";
     }
   </script>
     
@@ -94,6 +91,8 @@
   <body id="body">
     <grass id="grass" style="background-image:url(grassTrav.png)"></grass>
     <div id="countdown">3</div>
+    <div id="countdown2">2</div>
+    <div id="countdown3">1</div>
     <grass id="grass" style="background-image:url(grass2.png)"></grass>
     <div id="shade"></div>
     <div id="infobox">
