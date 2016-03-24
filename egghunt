@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Egg hunt</title>
+  </head>
+  <style>
+    #body{
+      background-color:#ccf;
+    }
+  </style>
+  <body id="body">
+    
+  </body>
+</html>
