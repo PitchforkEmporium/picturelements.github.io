@@ -76,13 +76,21 @@
     #travolta{
       display:block;
       position:absolute;
-      width:248px;
-      height:200px;
-      background-size:248px 200px;
-      background-image:url(Confused-Travolta.gif);
+      width:300px;
+      height:242px;
+      background-image:url(ConfusedTravoltaSprite.png);
       bottom:0;
       left:50%;
-      margin-left:-100px;
+      margin-left:-121px;
+      animation: aniTravolta 2s steps(25) infinite;
+      animation-direction:alternate;
+    }
+    
+    @ketframes{
+      0%{background-position: 0 0;}
+      50%{background-position: -7500px 0;}
+      50.0001%{background-position: 0 -242px;}
+      100%{background-position: -7500px -242px;}
     }
   </style>
   
