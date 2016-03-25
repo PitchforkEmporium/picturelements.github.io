@@ -35,11 +35,11 @@
       display: block;
       position: fixed;
       width:500px;
-      height:300px;
+      height:425px;
       top:50%;
       left:50%;
       margin-left:-250px;
-      margin-top:-150px;
+      margin-top:-212.5px;
       background-color:white;
     }
     #cross{
@@ -86,7 +86,17 @@
       animation-direction:alternate;
     }
     
-    @ketframes{
+    #info1{
+      position:absolute;
+      display:block;
+      top:25px;
+      left:25px;
+      width:450px;
+      height:300px;
+      background-color:#999;
+    }
+    
+    @keyframes aniTravolta{
       0%{background-position: 0 0;}
       50%{background-position: -7500px 0;}
       50.0001%{background-position: 0 -242px;}
@@ -119,7 +129,8 @@
     <grass id="grass" style="background-image:url(grass2.png)"></grass>
     <div id="shade"></div>
     <div id="infobox">
-      <div id="cross" onclick=cross()>✕</div>
+      <div id="info1"></div>
+      <!--<div id="cross" onclick=cross()>✕</div>-->
     </div>
   </body>
 </html>
