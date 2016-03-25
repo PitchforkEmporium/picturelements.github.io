@@ -96,6 +96,20 @@
       background-color:#999;
     }
     
+    #btn{
+      position:absolute;
+      display:block;
+      width:212.5px;
+      height:50px;
+      top:350px;
+      font-family:Bangers,Trebuchet MS,sans-serif;
+      font-size:40px;
+      line-height:50px;
+      text-align:center;
+      background-color:#999;
+      color:white;
+    }
+    
     @keyframes aniTravolta{
       0%{background-position: 0 0;}
       50%{background-position: -7500px 0;}
@@ -130,6 +144,8 @@
     <div id="shade"></div>
     <div id="infobox">
       <div id="info1"></div>
+      <div id="btn" style="left:25px">next</div>
+      <div id="btn" style="left:262.5px" onclick=cross()>skip</div>
       <!--<div id="cross" onclick=cross()>✕</div>-->
     </div>
   </body>
