@@ -14,6 +14,7 @@
       position: fixed;
       margin: 0;
     }
+    
     #grass{
       display:block;
       position:fixed;
@@ -24,6 +25,7 @@
       background-size:200px 100px;
       background-repeat:repeat-x;
     }
+    
     #shade{
       display:block;
       position:fixed;
@@ -31,6 +33,7 @@
       height:100%;
       background-color:rgba(0,0,0,0.6);
     }
+    
     #infobox{
       display: block;
       position: fixed;
@@ -42,6 +45,7 @@
       margin-top:-212.5px;
       background-color:white;
     }
+    
     #cross{
       display: block;
       position: absolute;
@@ -73,6 +77,7 @@
       transition: 1s cubic-bezier(0, 0.8, 1, 0.2);
       text-shadow:0 20px 0 #ff8a00;
     }
+    
     #travolta{
       display:block;
       position:absolute;
@@ -80,10 +85,10 @@
       height:242px;
       background-image:url(ConfusedTravoltaSprite.png);
       bottom:0;
-      left:50%;
-      margin-left:-121px;
+      left:100px;
       animation: aniTravolta 2s steps(25) infinite;
       animation-direction:alternate;
+      transition:bottom 2000ms;
     }
     
     #info1{
@@ -130,6 +135,7 @@
       document.getElementById("countdown").style.transitionDelay="1s";
       document.getElementById("countdown2").style.transitionDelay="2s";
       document.getElementById("countdown3").style.transitionDelay="3s";
+      document.getElementById("travolta").style.bottom="-240px";
     }
   </script>
     
