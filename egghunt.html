@@ -235,7 +235,7 @@
           if (eggPosY[i]>window.innerHeight-50&&eggPosY[i]<window.innerHeight+50&&eggPosX[i]>=travoltaPos-50&&eggPosX[i]<=travoltaPos+50){
             caught++;
             document.getElementById("eggsCaught").innerHTML="Eggs caught: "+caught+"";
-            score+=Math.floor((100*eggSpeed[i]));
+            score+=(10*Math.floor(eggSpeed[i]));
             document.getElementById("score").innerHTML="Score: "+score+"";
             if (score>hi){
               hi=score;
