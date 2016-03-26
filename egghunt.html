@@ -228,6 +228,11 @@
             document.getElementById("eggsMissed").innerHTML="Eggs missed: "+missed+"";
             eggPosY[i]+=1000;
           }
+          if (eggPosY[i]>window.innerHeight-50&&eggPosY[i]<window.innerHeight+50&&eggPosX[i]>=travoltaPos-50&&eggPosX[i]<=travoltaPos+50){
+            caught++;
+            document.getElementById("eggsCaught").innerHTML="Eggs caught: "+caught+"";
+            eggPosY[i]+=1000;
+          }
         }
       }
       ctx.drawImage(basket[0],travoltaPos-220,window.innerHeight-200,400,200);
