@@ -199,7 +199,7 @@
         if (eggRelease[i]<=frameCount){
           ctx.drawImage(eggs[eggType[i]],eggPosX[i]-40,eggPosY[i]-40,80,80);
           eggPosY[i]+=eggSpeed[i];
-          if (eggsReleased==frameCount){
+          if (eggRelease==frameCount){
             dropped++;
             document.getElementById("eggsDropped").innerHTML="Eggs dropped: "+dropped+"";
           }
