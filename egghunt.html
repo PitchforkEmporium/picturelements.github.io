@@ -116,13 +116,6 @@
       cursor:pointer;
     }
     
-    #pic1,#pic2,#pic3,#pic4{
-      position:fixed;
-      display:block;
-      width:150px;
-      height:150px;
-    }
-    
     @keyframes aniTravolta{
       0%{background-position: 0 0;}
       50%{background-position: -7500px 0;}
@@ -176,10 +169,10 @@
     
   <body id="body" onload=init()>
     <audio id="sound" loop src="soundtrack.mp3" type="audio/mpeg"></audio>
-    <pic id="pic1" style="background-image:url(egg1.png)"></pic>
-    <pic id="pic2" style="background-image:url(egg2.png)"></pic>
-    <pic id="pic3" style="background-image:url(egg3.png)"></pic>
-    <pic id="pic4" style="background-image:url(egg4.png)"></pic>
+    <img id="pic1" src="egg1.png"></img>
+    <img id="pic2" src="egg2.png"></img>
+    <img id="pic3" src="egg3.png"></img>
+    <img id="pic4" src="egg4.png"></img>
     <grass id="grass" style="background-image:url(grass.png)"></grass>
     <canvas id="canvas" style="display:block; position:fixed; top:0; left:0; width:100%; height:100%;"></canvas>
     <travolta id="travolta"></travolta>
