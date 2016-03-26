@@ -139,16 +139,14 @@
     eggs[2].src="egg3.png";
     eggs.push(new Image(80,80));
     eggs[3].src="egg4.png";
-    console.log(eggs[0]);
     
     function init(){
       for (i=0;i<30;i++){
         eggPosX.push(Math.random()*(window.innerWidth-200)+100);
-        eggPosY.push((Math.random()*300));
+        eggPosY.push(-100-(Math.random()*300));
         eggType.push(Math.floor(Math.random()*4));
         eggSpeed.push(Math.random()*5+5);
         eggRotation.push(Math.random()*10+5);
-        console.log(eggType[1]);
       }
       document.getElementById("canvas").width=window.innerWidth;
       document.getElementById("canvas").height=window.innerHeight;
@@ -176,11 +174,9 @@
       var ctx=document.getElementById("canvas").getContext("2d");
       ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
       for (i=0;i<30;i++){
-        //ctx.drawImage(pic1,eggPosX[i],eggPosY[i]);
-        //eggPosY[i]+=eggSpeed[i];
-        ctx.drawImage(eggs[eggType[i]],Math.random()*window.innerWidth,Math.random()*window.innerHeight,80,80);
+        ctx.drawImage(eggs[eggType[i]],eggPosX[i]-40,eggPosY[i]-40,80,80);
+        eggPosY[i]+=eggSpeed[i];
       }
-        eggPosY[0]+=eggSpeed[0];
     }
   </script>
     
