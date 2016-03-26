@@ -157,6 +157,7 @@
     basket[1].src="travoltaBasket2.png";
     var frameCount=0,travoltaPos=window.innerWidth/2,move=0;
     var dropped=0,caught=0,missed=0,score=0,hi=0,countUp;
+    var thread;
     
     function init(){
       var tot=0;
@@ -204,7 +205,7 @@
     }
     
     function start(){
-      var thread=setInterval(paint,25);
+      thread=setInterval(paint,25);
     }
     
     function moveTravolta(e){
