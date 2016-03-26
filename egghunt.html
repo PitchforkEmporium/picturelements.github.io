@@ -187,10 +187,11 @@
       var ctx=document.getElementById("canvas").getContext("2d");
       ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
       for (i=0;i<50;i++){
-        if (frameCount>=eggRelease[i]){
+        if (eggRelease[i]>=frameCount){
           ctx.drawImage(eggs[eggType[i]],eggPosX[i]-40,eggPosY[i]-40,80,80);
           eggPosY[i]+=eggSpeed[i];
         }
+        frameCount++;
       }
     }
   </script>
