@@ -125,6 +125,24 @@
   </style>
   
   <script>
+    var eggPosX=[];
+    var eggPosY=[];
+    var eggType=[];
+    var eggSpeed=[];
+    var eggRotation=[];
+    
+    function init(){
+      for (i=0;i<30;i++){
+        eggPosX.push(Math.random()*(window.innerWidth-200)+100);
+        eggPosY.push(-100-(Math.random()*300));
+        eggType.push(Math.floor(Math.random()*4));
+        eggSpeed.push(Math.random()*5+5);
+        eggRotation.push(Math.random()*10+5);
+      }
+      document.getElementById("canvas").width=window.innerWidth;
+      document.getElementById("canvas").height=window.innerHeight;
+    }
+
     function cross(){
       document.getElementById("sound").play();
       document.getElementById("infobox").style.display="none";
@@ -137,12 +155,20 @@
       document.getElementById("countdown3").style.transitionDelay="3s";
       document.getElementById("travolta").style.bottom="-240px";
     }
+    
+    function play(){
+      var ctx=document.getElementById("canvas").getContext("2d");
+      for (i=0;i<30;i++){
+        
+      }
+    }
   </script>
     
     
-  <body id="body">
+  <body id="body" onload=init()>
     <audio id="sound" loop src="soundtrack.mp3" type="audio/mpeg"></audio>
     <grass id="grass" style="background-image:url(grass.png)"></grass>
+    <canvas id="canvas" style="display:block; position:fixed; top:0; left:0; width:100%; height:100%;"></canvas>
     <travolta id="travolta"></travolta>
     <div id="countdown">3</div>
     <div id="countdown2">2</div>
