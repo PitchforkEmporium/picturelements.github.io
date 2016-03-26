@@ -130,6 +130,7 @@
     var eggType=[];
     var eggSpeed=[];
     var eggRotation=[];
+    var eggTotRotation=[];
     var eggRelease=[];
     var eggs=[];
     eggs.push(new Image(80,80));
@@ -149,11 +150,12 @@
         eggPosY.push(-40);
         eggType.push(Math.floor(Math.random()*4));
         eggSpeed.push(Math.random()*5+5);
-        eggRotation.push(Math.random()*10+5);
+        eggRotation.push((Math.random()*10+5)*Math.PI/180);
+        eggTotRotation.push((Math.random()*360)*Math.PI/180);
         if (i==0){
           eggRelease.push(0);
         }else{
-          eggRelease.push(tot+100+Math.random()*(200-i*2));
+          eggRelease.push(tot+100+Math.random()*(100-i));
           tot+=(eggRelease[i]-tot);
         }
       }
@@ -189,8 +191,10 @@
       ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
       for (i=0;i<50;i++){
         if (eggRelease[i]<=frameCount){
+          ctx.rotate(eggTotRotatation[i]);
           ctx.drawImage(eggs[eggType[i]],eggPosX[i]-40,eggPosY[i]-40,80,80);
           eggPosY[i]+=eggSpeed[i];
+          eggTotRotation[i]+=eggRotation[i];
         }
       }
       frameCount++;
