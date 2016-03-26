@@ -175,7 +175,7 @@
       var scale=5280/tot;
       for (i=0;i<50;i++){
         eggRelease[i]=Math.floor(eggRelease[i]*scale); 
-        console.log(eggRelease[i]);
+        //console.log(eggRelease[i]);
       }
       document.getElementById("canvas").width=window.innerWidth;
       document.getElementById("canvas").height=window.innerHeight;
@@ -221,7 +221,8 @@
     
     function yayWin(){
       document.getElementById("winscreen").style.display="block";
-      setInterval(countit,25);
+      clearInterval(thread);
+      thread=setInterval(countit,25);
     }
     
     function paint(){
