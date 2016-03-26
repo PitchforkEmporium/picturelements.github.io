@@ -130,7 +130,7 @@
     var eggType=[];
     var eggSpeed=[];
     var eggRotation=[];
-    var releaseEgg=[];
+    var eggRelease=[];
     var eggs=[];
     eggs.push(new Image(80,80));
     eggs[0].src="egg1.png";
@@ -153,8 +153,8 @@
         if (i==0){
           eggRelease.push(0);
         }else{
-          eggRelease.push(200+Math.random()*(700-i*10));
-          tot+=eggReleased[i];
+          eggRelease.push(tot+200+Math.random()*(700-i*10));
+          tot+=eggRelease[i];
         }
       }
       var scale=5280/tot;
