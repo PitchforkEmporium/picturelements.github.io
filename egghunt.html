@@ -140,6 +140,7 @@
     var eggSpeed=[];
     var eggRelease=[];
     var eggs=[];
+    var basket=[];
     eggs.push(new Image(80,80));
     eggs[0].src="egg1.png";
     eggs.push(new Image(80,80));
@@ -148,7 +149,11 @@
     eggs[2].src="egg3.png";
     eggs.push(new Image(80,80));
     eggs[3].src="egg4.png";
-    var frameCount=0;
+    basket.push(new Image(400,200));
+    basket[0].src="travoltaBasket1.png";
+    basket.push(new Image(400,200));
+    basket[1].src="travoltaBasket2.png";
+    var frameCount=0,travoltaPos=window.innerWidth/2;
     var dropped=0,caught=0,missed=0;
     
     function init(){
@@ -195,6 +200,7 @@
     function paint(){
       var ctx=document.getElementById("canvas").getContext("2d");
       ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
+      ctx.drawImage(basket[0],basketPos-200,window.innerHeight-250,400,200);
       for (i=0;i<50;i++){
         if (eggRelease[i]<=frameCount){
           ctx.drawImage(eggs[eggType[i]],eggPosX[i]-40,eggPosY[i]-40,80,80);
@@ -210,6 +216,7 @@
           }
         }
       }
+      ctx.drawImage(basket[1],basketPos-200,window.innerHeight-250,400,200);
       frameCount++;
     }
   </script>
@@ -227,6 +234,7 @@
     <eggsDropped id="eggsDropped" style="top:5px">Eggs dropped: 0</eggsDropped>
     <eggsCaught id="eggsCaught" style="top:40px">Eggs caught: 0</eggsCaught>
     <eggsMissed id="eggsMissed" style="top:75px">Eggs missed: 0</eggsMissed>
+    <score id="score" style="top:100px">Score: 0</score>
     <div id="shade"></div>
     <div id="infobox">
       <div id="info1"></div>
