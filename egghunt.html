@@ -155,10 +155,6 @@
     basket[1].src="travoltaBasket2.png";
     var frameCount=0,travoltaPos=window.innerWidth/2,move=0;
     var dropped=0,caught=0,missed=0,score=0,hi=0;
-    if (localStorage.getItem("highscore")!=null){
-      hi=localStorage.getItem("highscore");
-      document.getElementById("hiscore").innerHTML="Highscore: "+hi+"";
-    }
     
     function init(){
       var tot=0;
@@ -181,6 +177,10 @@
       }
       document.getElementById("canvas").width=window.innerWidth;
       document.getElementById("canvas").height=window.innerHeight;
+      if (localStorage.getItem("highscore")!=null){
+        hi=localStorage.getItem("highscore");
+      }
+      document.getElementById("hiscore").innerHTML="Highscore: "+hi+"";
     }
 
     function cross(){
