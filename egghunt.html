@@ -116,6 +116,15 @@
       cursor:pointer;
     }
     
+    #eggsDropped,#eggsCaught{
+      position:fixed;
+      font-family:Bangers,Trebuchet MS,sans-serif;
+      font-size:30px;
+      left:5px;
+      color: #FFCA00;
+      text-shadow:0 5px 0 #ff8a00;
+    }
+    
     @keyframes aniTravolta{
       0%{background-position: 0 0;}
       50%{background-position: -7500px 0;}
@@ -205,6 +214,8 @@
     <div id="countdown2">2</div>
     <div id="countdown3">1</div>
     <grass id="grass" style="background-image:url(grass2.png)"></grass>
+    <eggsDropped id="eggsDropped" style="top:5px">Eggs dropped: 0</eggsDropped>
+    <eggsCaught id="caughtDropped style="top:40px"">Eggs caught: 0</eggsCaught>
     <div id="shade"></div>
     <div id="infobox">
       <div id="info1"></div>
