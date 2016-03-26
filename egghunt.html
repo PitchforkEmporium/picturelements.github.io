@@ -154,7 +154,7 @@
           eggRelease.push(0);
         }else{
           eggRelease.push(tot+200+Math.random()*(700-i*10));
-          tot+=eggRelease[i];
+          tot+=(eggRelease[i]-tot);
         }
       }
       var scale=5280/tot;
