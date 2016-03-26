@@ -139,12 +139,13 @@
     eggs[2].src="egg3.png";
     eggs.push(new Image(80,80));
     eggs[3].src="egg4.png";
+    console.log(eggs[0]);
     
     function init(){
       for (i=0;i<30;i++){
         eggPosX.push(Math.random()*(window.innerWidth-200)+100);
         eggPosY.push((Math.random()*300));
-        eggType.push(Math.floor(Math.random()*4+1));
+        eggType.push(Math.floor(Math.random()*4));
         eggSpeed.push(Math.random()*5+5);
         eggRotation.push(Math.random()*10+5);
         console.log(eggType[1]);
