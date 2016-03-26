@@ -157,7 +157,7 @@
     var dropped=0,caught=0,missed=0,score=0,hi=0;
     if (localStorage.getItem("highscore")!=null){
       hi=localStorage.getItem("highscore");
-      document.getElementById("hiscore").innerHTML="Highscore: "+hi;
+      document.getElementById("hiscore").innerHTML="Highscore: "+hi+"";
     }
     
     function init(){
@@ -235,11 +235,11 @@
           if (eggPosY[i]>window.innerHeight-50&&eggPosY[i]<window.innerHeight+50&&eggPosX[i]>=travoltaPos-50&&eggPosX[i]<=travoltaPos+50){
             caught++;
             document.getElementById("eggsCaught").innerHTML="Eggs caught: "+caught+"";
-            score+=(100*eggSpeed[i]);
+            score+=Math.floor((100*eggSpeed[i]));
             document.getElementById("score").innerHTML="Score: "+score+"";
             if (score>hi){
               hi=score;
-              document.getElementById("hiscore").innerHTML="Highscore: "+hi;
+              document.getElementById("hiscore").innerHTML="Highscore: "+hi+"";
               localStorage.setItem("highscore",hi);
             }
             eggPosY[i]+=1000;
