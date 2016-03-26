@@ -64,16 +64,16 @@
       z-index: 1000;
     }
     
-    #countdown,#countdown2,#countdown3{
+    #countdown,#countdown2,#countdown3,#showScore{
       display:block;
       position:fixed;
-      font-family:Bangers;
+      font-family:Bangers,Trebuchet MS,sans-serif;
       font-size: 200px;
-      width:200px;
+      width:1000px;
       height:200px;
       top:-200px;
       left:50%;
-      margin-left:-100px;
+      margin-left:-500px;
       text-align:center;
       color: #FFCA00;
       transition: 1s cubic-bezier(0, 0.8, 1, 0.2);
@@ -299,7 +299,8 @@
       <!--<div id="cross" onclick=cross()>✕</div>-->
     </div>
     <div id="winscreen" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7);">
-      
+      <div id="showScore" style="top:50% !important; margin-top:-250px !important;">Score: 0</div>
+      <div id="showScore" style="top:50% !important; margin-top:0 !important; font-size:100px !important;">Highscore: 0</div>
     </div>
   </body>
 </html>
