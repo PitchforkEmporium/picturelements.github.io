@@ -133,12 +133,13 @@
     var thread=setInterval(paint,25);
     var pic1=new Image(150,150);
     pic1.src="egg1.png";
+    console.log(pic1);
     
     function init(){
       for (i=0;i<30;i++){
         eggPosX.push(Math.random()*(window.innerWidth-200)+100);
         eggPosY.push(-100-(Math.random()*300));
-        eggType.push("pic"+Math.floor(Math.random()*4));
+        eggType.push("pic"+Math.floor(Math.random()*4)+1);
         eggSpeed.push(Math.random()*5+5);
         eggRotation.push(Math.random()*10+5);
       }
