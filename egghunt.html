@@ -200,7 +200,7 @@
     function paint(){
       var ctx=document.getElementById("canvas").getContext("2d");
       ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
-      ctx.drawImage(basket[0],travoltaPos-200,window.innerHeight-250,400,200);
+      ctx.drawImage(basket[1],travoltaPos-200,window.innerHeight-200,400,200);
       for (i=0;i<50;i++){
         if (eggRelease[i]<=frameCount){
           ctx.drawImage(eggs[eggType[i]],eggPosX[i]-40,eggPosY[i]-40,80,80);
@@ -216,7 +216,7 @@
           }
         }
       }
-      ctx.drawImage(basket[1],travoltaPos-200,window.innerHeight-250,400,200);
+      ctx.drawImage(basket[0],travoltaPos-200,window.innerHeight-200,400,200);
       frameCount++;
     }
   </script>
