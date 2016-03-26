@@ -197,10 +197,18 @@
       var thread=setInterval(paint,25);
     }
     
+    function moveTravolta(e){
+      if (e.keyCode==37){
+        travoltaPos-=5;
+      }else if (e.keyCode==39){
+        travoltaPos+=5;
+      }
+    } 
+    
     function paint(){
       var ctx=document.getElementById("canvas").getContext("2d");
       ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
-      ctx.drawImage(basket[1],travoltaPos-200,window.innerHeight-200,400,200);
+      ctx.drawImage(basket[1],travoltaPos-220,window.innerHeight-200,400,200);
       for (i=0;i<50;i++){
         if (eggRelease[i]<=frameCount){
           ctx.drawImage(eggs[eggType[i]],eggPosX[i]-40,eggPosY[i]-40,80,80);
@@ -216,13 +224,13 @@
           }
         }
       }
-      ctx.drawImage(basket[0],travoltaPos-200,window.innerHeight-200,400,200);
+      ctx.drawImage(basket[0],travoltaPos-220,window.innerHeight-200,400,200);
       frameCount++;
     }
   </script>
     
     
-  <body id="body" onload=init()>
+  <body id="body" onload=init() onkeydown=moveTravolta(event)>
     <audio id="sound" loop src="soundtrack.mp3" type="audio/mpeg"></audio>
     <grass id="grass" style="background-image:url(grass.png)"></grass>
     <canvas id="canvas" style="display:block; position:fixed; top:0; left:0;"></canvas>
