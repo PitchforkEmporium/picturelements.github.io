@@ -116,7 +116,7 @@
       cursor:pointer;
     }
     
-    #eggsDropped,#eggsCaught,#eggsMissed,#score{
+    #eggsDropped,#eggsCaught,#eggsMissed,#hiscore,#score{
       position:fixed;
       font-family:Bangers,Trebuchet MS,sans-serif;
       font-size:30px;
@@ -154,7 +154,11 @@
     basket.push(new Image(400,200));
     basket[1].src="travoltaBasket2.png";
     var frameCount=0,travoltaPos=window.innerWidth/2,move=0;
-    var dropped=0,caught=0,missed=0;
+    var dropped=0,caught=0,missed=0,score=0,hi=0;
+    if (localStorage.getItem("highscore")!=null){
+      hi=localStorage.getItem("highscore");
+      document.getElementById("hiscore").innerHTML="Highscore: "+hi;
+    }
     
     function init(){
       var tot=0;
@@ -231,6 +235,13 @@
           if (eggPosY[i]>window.innerHeight-50&&eggPosY[i]<window.innerHeight+50&&eggPosX[i]>=travoltaPos-50&&eggPosX[i]<=travoltaPos+50){
             caught++;
             document.getElementById("eggsCaught").innerHTML="Eggs caught: "+caught+"";
+            score+=(100*eggSpeed[i]);
+            document.getElementById("score").innerHTML="Score: "+score+"";
+            if (score>hi){
+              hi=score;
+              document.getElementById("hiscore").innerHTML="Highscore: "+hi;
+              localStorage.setItem("highscore",hi);
+            }
             eggPosY[i]+=1000;
           }
         }
@@ -253,7 +264,8 @@
     <eggsDropped id="eggsDropped" style="top:5px">Eggs dropped: 0</eggsDropped>
     <eggsCaught id="eggsCaught" style="top:40px">Eggs caught: 0</eggsCaught>
     <eggsMissed id="eggsMissed" style="top:75px">Eggs missed: 0</eggsMissed>
-    <score id="score" style="top:100px">Score: 0</score>
+    <hiscore id="hiscore" style="top:110px">Highscore: 0</hiscore>
+    <score id="score" style="top:145px">Score: 0</score>
     <div id="shade"></div>
     <div id="infobox">
       <div id="info1"></div>
