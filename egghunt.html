@@ -172,7 +172,7 @@
           tot+=(eggRelease[i]-tot);
         }
       }
-      var scale=5280/tot;
+      var scale=5160/tot;
       for (i=0;i<50;i++){
         eggRelease[i]=Math.floor(eggRelease[i]*scale); 
         //console.log(eggRelease[i]);
@@ -200,7 +200,7 @@
     }
     
     function waitforit(){
-      setTimeout(start,3000);
+      setTimeout(start,3500);
     }
     
     function start(){
