@@ -238,7 +238,7 @@
             document.getElementById("eggsCaught").innerHTML="Eggs caught: "+caught+"";
             score+=(10*Math.floor(eggSpeed[i]));
             document.getElementById("score").innerHTML="Score: "+score+"";
-            plop.setCurrentTime=0;
+            plop.currentTime=0;
             plop.play();
             if (score>hi){
               hi=score;
