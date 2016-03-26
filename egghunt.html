@@ -131,6 +131,8 @@
     var eggSpeed=[];
     var eggRotation=[];
     var thread=setInterval(paint,25);
+    var pic1=new Image();
+    pic1.src="egg1.png";
     
     function init(){
       for (i=0;i<30;i++){
@@ -160,7 +162,7 @@
     function play(){
       var ctx=document.getElementById("canvas").getContext("2d");
       for (i=0;i<30;i++){
-        ctx.drawImage(document.getElementById(eggType[i]),eggPosX[i],eggPosY[i],150,150);
+        ctx.drawImage(eggType[i],eggPosX[i],eggPosY[i],150,150);
         eggPosY[i]+=eggSpeed[i];
       }
     }
