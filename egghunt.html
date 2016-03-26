@@ -159,10 +159,10 @@
       document.getElementById("travolta").style.bottom="-240px";
     }
     
-    function play(){
+    function paint(){
       var ctx=document.getElementById("canvas").getContext("2d");
       for (i=0;i<30;i++){
-        ctx.drawImage(eggType[i],eggPosX[i],eggPosY[i],150,150);
+        ctx.drawImage(document.getElementById(eggType[i]),eggPosX[i],eggPosY[i],150,150);
         eggPosY[i]+=eggSpeed[i];
       }
     }
