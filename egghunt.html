@@ -3,6 +3,8 @@
     <title>Egg hunt</title>
     <link rel="icon" href="icon.png" type="image/png">
     <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <audio id="sound" src="soundtrack.mp3" type="audio/mpeg"></audio>
+    <audio id="plop" src="plop.wav" type="audio/wav"></audio>
   </head>
   <style>
     #body{
@@ -155,7 +157,6 @@
     basket[1].src="travoltaBasket2.png";
     var frameCount=0,travoltaPos=window.innerWidth/2,move=0;
     var dropped=0,caught=0,missed=0,score=0,hi=0;
-    var plop=new Audio(plop.wav);
     
     function init(){
       var tot=0;
@@ -238,8 +239,8 @@
             document.getElementById("eggsCaught").innerHTML="Eggs caught: "+caught+"";
             score+=(10*Math.floor(eggSpeed[i]));
             document.getElementById("score").innerHTML="Score: "+score+"";
-            plop.currentTime=0;
-            plop.play();
+            document.getElementById("plop").currentTime=0;
+            document.getElementById("plop").play();
             if (score>hi){
               hi=score;
               document.getElementById("hiscore").innerHTML="Highscore: "+hi+"";
@@ -256,7 +257,6 @@
     
     
   <body id="body" onload=init() onkeydown=moveTravolta(event)>
-    <audio id="sound" src="soundtrack.mp3" type="audio/mpeg"></audio>
     <grass id="grass" style="background-image:url(grass.png)"></grass>
     <canvas id="canvas" style="display:block; position:fixed; top:0; left:0;"></canvas>
     <travolta id="travolta"></travolta>
