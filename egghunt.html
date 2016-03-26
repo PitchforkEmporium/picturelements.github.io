@@ -149,7 +149,7 @@
     eggs.push(new Image(80,80));
     eggs[3].src="egg4.png";
     var frameCount=0;
-    var dropped=0,caught=0;
+    var dropped=0,caught=0,missed=0;
     
     function init(){
       var tot=0;
@@ -203,6 +203,11 @@
             dropped++;
             document.getElementById("eggsDropped").innerHTML="Eggs dropped: "+dropped+"";
           }
+          if (eggPosY[i]>window.innerHeight&&eggPosY[i]<window.innerHeight+100){
+            missed++;
+            document.getElementById("eggsMissed").innerHTML="Eggs missed: "+missed+"";
+            eggPosY[i]+=1000;
+          }
         }
       }
       frameCount++;
@@ -220,7 +225,8 @@
     <div id="countdown3">1</div>
     <grass id="grass" style="background-image:url(grass2.png)"></grass>
     <eggsDropped id="eggsDropped" style="top:5px">Eggs dropped: 0</eggsDropped>
-    <eggsCaught id="eggsCaught" style="top:40px"">Eggs caught: 0</eggsCaught>
+    <eggsCaught id="eggsCaught" style="top:40px">Eggs caught: 0</eggsCaught>
+    <eggsMissed id="eggsMissed" style="top:75px">Eggs missed: 0</eggsMissed>
     <div id="shade"></div>
     <div id="infobox">
       <div id="info1"></div>
