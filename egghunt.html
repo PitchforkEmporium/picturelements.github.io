@@ -156,7 +156,7 @@
     basket.push(new Image(400,200));
     basket[1].src="travoltaBasket2.png";
     var frameCount=0,travoltaPos=window.innerWidth/2,move=0;
-    var dropped=0,caught=0,missed=0,score=0,hi=0;
+    var dropped=0,caught=0,missed=0,score=0,hi=0,countUp;
     
     function init(){
       var tot=0;
@@ -221,6 +221,7 @@
     
     function yayWin(){
       document.getElementById("winscreen").style.display="block";
+      setInterval(countit,25);
     }
     
     function paint(){
@@ -275,6 +276,15 @@
       ctx.drawImage(basket[0],travoltaPos-220,window.innerHeight-200,400,200);
       frameCount++;
     }
+    
+    function countit(){
+      if (countUp<=100){
+        document.getElementById("showScore").innerHTML="Score: "+Math.floor(score*(countUp/100))+"";
+      }else{
+        document.getElementById("showHiscore").innerHTML="Highscore: "+hi+"";
+      }
+      countUp++;
+    }
   </script>
     
     
@@ -300,7 +310,7 @@
     </div>
     <div id="winscreen" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7);">
       <div id="showScore" style="top:50% !important; margin-top:-200px !important;">Score: 0</div>
-      <div id="showHiscore" style="top:50% !important; margin-top:20 !important; font-size:100px !important; text-shadow:0 10px 0 #ff8a00 !important;">Highscore: 0</div>
+      <div id="showHiscore" style="top:50% !important; margin-top:50 !important; font-size:100px !important; text-shadow:0 10px 0 #ff8a00 !important;"></div>
     </div>
   </body>
 </html>
