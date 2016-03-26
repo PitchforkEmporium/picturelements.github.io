@@ -162,11 +162,12 @@
     
     function paint(){
       var ctx=document.getElementById("canvas").getContext("2d");
+      ctx.clearRect(window.innerWidth,window.innerHeight);
       for (i=0;i<30;i++){
         //ctx.drawImage(pic1,eggPosX[i],eggPosY[i]);
         //eggPosY[i]+=eggSpeed[i];
       }
-        ctx.drawImage(pic1,100,100+eggPosY[0],150,150);
+        ctx.drawImage(pic1,Math.random()*window.innerWidth,Math.random()*window.innerHeight,150,150);
         eggPosY[0]+=eggSpeed[0];
     }
   </script>
