@@ -163,9 +163,10 @@
     function paint(){
       var ctx=document.getElementById("canvas").getContext("2d");
       for (i=0;i<30;i++){
-        ctx.drawImage(pic1,eggPosX[i],eggPosY[i],150,150);
-        eggPosY[i]+=eggSpeed[i];
+        //ctx.drawImage(pic1,eggPosX[i],eggPosY[i],150,150);
+        //eggPosY[i]+=eggSpeed[i];
       }
+        ctx.drawImage(pic1,100,100,150,150);
     }
   </script>
     
