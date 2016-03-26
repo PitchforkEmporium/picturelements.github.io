@@ -130,7 +130,6 @@
     var eggType=[];
     var eggSpeed=[];
     var eggRotation=[];
-    var thread=setInterval(paint,25);
     var pic1=new Image(150,150);
     pic1.src="egg1.png";
     console.log(pic1);
@@ -158,6 +157,11 @@
       document.getElementById("countdown2").style.transitionDelay="2s";
       document.getElementById("countdown3").style.transitionDelay="3s";
       document.getElementById("travolta").style.bottom="-240px";
+      start();
+    }
+    
+    function start(){
+      var thread=setInterval(paint,25);
     }
     
     function paint(){
