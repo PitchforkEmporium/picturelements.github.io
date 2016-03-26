@@ -199,9 +199,9 @@
     
     function moveTravolta(e){
       if (e.keyCode==37){
-        moveTravolta=-10;
+        travoltaPos-=10;
       }else if (e.keyCode==39){
-        moveTravolta=10;
+        travoltaPos+=10;
       }
     } 
     
@@ -209,12 +209,12 @@
       var ctx=document.getElementById("canvas").getContext("2d");
       ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
       ctx.drawImage(basket[1],travoltaPos-220,window.innerHeight-200,400,200);
-      travoltaPos+=moveTravolta;
+      /*travoltaPos+=moveTravolta;
       if (moveTravolta>0){
         moveTravolta--;
       }else if (moveTravolta<0){
         moveTravolta++;
-      }
+      }*/
       for (i=0;i<50;i++){
         if (eggRelease[i]<=frameCount){
           ctx.drawImage(eggs[eggType[i]],eggPosX[i]-40,eggPosY[i]-40,80,80);
