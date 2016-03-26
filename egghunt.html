@@ -196,7 +196,11 @@
       document.getElementById("countdown2").style.transitionDelay="2s";
       document.getElementById("countdown3").style.transitionDelay="3s";
       document.getElementById("travolta").style.bottom="-240px";
-      start();
+      waitforit();
+    }
+    
+    function waitforit(){
+      setTimeout(start,3000);
     }
     
     function start(){
@@ -208,8 +212,16 @@
         move=-10;
       }else if (e.keyCode==39){
         move=10;
+      }else if (e.keyCode==83){
+        travoltaPos-=50;
+      }else if (e.keyCode==68){
+        travoltaPos+=50;
       }
     } 
+    
+    function yayWin(){
+      document.getElementById("winscreen").style.display="block";
+    }
     
     function paint(){
       var ctx=document.getElementById("canvas").getContext("2d");
@@ -234,7 +246,7 @@
             document.getElementById("eggsMissed").innerHTML="Eggs missed: "+missed+"";
             eggPosY[i]+=1000;
           }
-          if (eggPosY[i]>window.innerHeight-50&&eggPosY[i]<window.innerHeight+50&&eggPosX[i]>=travoltaPos-50&&eggPosX[i]<=travoltaPos+50){
+          if (eggPosY[i]>window.innerHeight-50&&eggPosY[i]<window.innerHeight+50&&eggPosX[i]>=travoltaPos-70&&eggPosX[i]<=travoltaPos+70){
             caught++;
             document.getElementById("eggsCaught").innerHTML="Eggs caught: "+caught+"";
             score+=(10*Math.floor(eggSpeed[i]));
@@ -249,6 +261,9 @@
             eggPosY[i]+=1000;
           }
         }
+      }
+      if (caught+missed==50||frameCount==135*40){
+        yayWin();
       }
       ctx.drawImage(basket[0],travoltaPos-220,window.innerHeight-200,400,200);
       frameCount++;
