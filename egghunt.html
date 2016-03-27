@@ -229,8 +229,8 @@
     
     function yayWin(){
       document.getElementById("winscreen").style.display="block";
-      document.getElementById("showScore").innerHTML="Score: "+score+"";
-      document.getElementById("showHiscore").innerHTML="Highscore: "+hi+"";
+      /*document.getElementById("showScore").innerHTML="Score: "+score+"";
+      document.getElementById("showHiscore").innerHTML="Highscore: "+hi+"";*/
       won=1;
     }
     
@@ -280,17 +280,18 @@
           }
         }
       }
+      if (won==0){
       if (caught+missed==100||frameCount==135*40){
         yayWin();
       }
-      /*}else{
+      }else{
         if (countUp<=100){
           document.getElementById("showScore").innerHTML="Score: "+Math.floor(score*(countUp/100))+"";
         }else{
           document.getElementById("showHiscore").innerHTML="Highscore: "+hi+"";
         }
         countUp++;
-      }*/
+      }
       ctx.drawImage(basket[0],travoltaPos-220,window.innerHeight-200,400,200);
       frameCount++;
     }
