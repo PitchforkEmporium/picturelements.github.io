@@ -165,7 +165,7 @@
         eggPosX.push(Math.random()*(window.innerWidth-200)+100);
         eggPosY.push(-40);
         eggType.push(Math.floor(Math.random()*4));
-        eggSpeed.push(Math.random()*5+i/10+1);
+        eggSpeed.push(Math.random()*5+8);
         if (i==0){
           eggRelease.push(0);
         }else{
@@ -229,8 +229,8 @@
     
     function yayWin(){
       document.getElementById("winscreen").style.display="block";
-      /*document.getElementById("showScore").innerHTML="Score: "+score+"";
-      document.getElementById("showHiscore").innerHTML="Highscore: "+hi+"";*/
+      document.getElementById("showScore").innerHTML="Score: "+score+"";
+      document.getElementById("showHiscore").innerHTML="Highscore: "+hi+"";
       won=1;
     }
     
@@ -280,18 +280,18 @@
           }
         }
       }
-      if (won==0){
+      //if (won==0){
       if (caught+missed==100||frameCount==135*40){
         yayWin();
       }
-      }else{
+      /*}else{
         if (countUp<=100){
           document.getElementById("showScore").innerHTML="Score: "+Math.floor(score*(countUp/100))+"";
         }else{
           document.getElementById("showHiscore").innerHTML="Highscore: "+hi+"";
         }
         countUp++;
-      }
+      }*/
       ctx.drawImage(basket[0],travoltaPos-220,window.innerHeight-200,400,200);
       frameCount++;
     }
