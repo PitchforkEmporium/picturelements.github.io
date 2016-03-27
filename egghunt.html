@@ -188,7 +188,8 @@
 
     function nextSlide(){
       slideNo++;
-      document.getElementById("info"+slideNo+"").style.display="none";
+      var slideStuff="info"+slideNo;
+      document.getElementById(slideStuff).style.display="none";
       if (slideNo==4){cross();}
     }
 
