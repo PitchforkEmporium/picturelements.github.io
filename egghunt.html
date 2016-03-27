@@ -161,11 +161,11 @@
     
     function init(){
       var tot=0;
-      for (i=0;i<50;i++){
+      for (i=0;i<100;i++){
         eggPosX.push(Math.random()*(window.innerWidth-200)+100);
         eggPosY.push(-40);
         eggType.push(Math.floor(Math.random()*4));
-        eggSpeed.push(Math.random()*5+5);
+        eggSpeed.push(Math.random()*5+8);
         if (i==0){
           eggRelease.push(0);
         }else{
@@ -174,7 +174,7 @@
         }
       }
       var scale=5160/tot;
-      for (i=0;i<50;i++){
+      for (i=0;i<100;i++){
         eggRelease[i]=Math.floor(eggRelease[i]*scale); 
         //console.log(eggRelease[i]);
       }
@@ -251,7 +251,7 @@
       }else if (move<0){
         move++;
       }
-      for (i=0;i<50;i++){
+      for (i=0;i<100;i++){
         if (eggRelease[i]<=frameCount){
           ctx.drawImage(eggs[eggType[i]],eggPosX[i]-40,eggPosY[i]-40,80,80);
           eggPosY[i]+=eggSpeed[i];
@@ -280,7 +280,7 @@
           }
         }
       }
-      if (caught+missed==50){
+      if (caught+missed==100||frameCount==135*40){
         yayWin();
       }
       /*}else{
