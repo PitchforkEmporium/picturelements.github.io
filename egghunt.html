@@ -93,7 +93,7 @@
       transition:bottom 2000ms;
     }
     
-    #info1{
+    #info1,#info2,#info3,#info4{
       position:absolute;
       display:block;
       top:25px;
@@ -157,7 +157,7 @@
     basket[1].src="travoltaBasket2.png";
     var frameCount=0,travoltaPos=window.innerWidth/2,move=0;
     var dropped=0,caught=0,missed=0,score=0,hi=0,countUp;
-    var thread,won=0;
+    var thread,won=0,slideNo=0;
     
     function init(){
       var tot=0;
@@ -184,6 +184,12 @@
         hi=localStorage.getItem("highscore");
       }
       document.getElementById("hiscore").innerHTML="Highscore: "+hi+"";
+    }
+
+    function nextSlide(){
+      slideNo++;
+      document.getElementById("info"+slideNo+"").style.display="none";
+      if (slideNo==4){cross();}
     }
 
     function cross(){
@@ -304,8 +310,11 @@
     <score id="score" style="top:145px">Score: 0</score>
     <div id="shade"></div>
     <div id="infobox">
-      <div id="info1"></div>
-      <div id="btn" style="left:25px">next</div>
+      <div id="info4" style="background-image:url(info4.png)"></div>
+      <div id="info3" style="background-image:url(info3.png)"></div>
+      <div id="info2" style="background-image:url(info2.png)"></div>
+      <div id="info1" style="background-image:url(info1.png)"></div>
+      <div id="btn" style="left:25px" onclick=nextSlide>next</div>
       <div id="btn" style="left:262.5px" onclick=cross()>skip</div>
       <!--<div id="cross" onclick=cross()>✕</div>-->
     </div>
