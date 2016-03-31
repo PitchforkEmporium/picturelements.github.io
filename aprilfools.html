@@ -26,6 +26,8 @@
       document.getElementById("song").play();
       
       function moveSpots(){
+        document.getElementById("canvas").width=window.innerWidth;
+        document.getElementById("canvas").height=window.innerHeight;
         var ctx = document.getElementById("canvas").getContext("2d");
         ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
         for (i=0;i<spotNo;i++){
@@ -35,8 +37,6 @@
           ctx.fill();
         }
       }
-      document.getElementById("canvas").width=window.innerWidth;
-      document.getElementById("canvas").height=window.innerHeight;
       setInterval(moveSpots,25);
     </script>
   </head>
