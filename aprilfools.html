@@ -16,7 +16,7 @@
     </style>
     <script>
       var spotPos=[],spotVel=[],spotSize=[],spotCols=[];
-      var spotNo=300;
+      var spotNo=100;
       for (i=0;i<spotNo;i++){
         spotPos.push(Math.random()*window.innerWidth,Math.random()*window.innerHeight);
         spotVel.push(Math.random()*6-3,Math.random()*6-3);
@@ -35,6 +35,12 @@
           ctx.beginPath();
           ctx.arc(spotPos[i*2]-spotSize[i]/2,spotPos[i*2+1]-spotSize[i]/2,spotSize[i],0,2*Math.PI);
           ctx.fill();
+          spotPos[i*2]+=spotVel[i*2];
+          spotPos[i*2+1]+=spotVel[i*2+1];
+          if (spotPos[i*2]>window.innerWidth+spotSize[i]/2){spotPos[i*2]=-spotSize[i]/2;}
+          if (spotPos[i*2]<-spotSize[i]/2){spotPos[i*2]=window.innerWidth+spotSize[i]/2;}
+          if (spotPos[i*2+1]>window.innerHeight+spotSize[i]/2){spotPos[i*2+1]=-spotSize[i]/2;}
+          if (spotPos[i*2+1]<-spotSize[i]/2){spotPos[i*2+1]=window.innerHeight+spotSize[i]/2;}
         }
       }
       setInterval(moveSpots,25);
