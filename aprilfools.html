@@ -3,13 +3,44 @@
     <audio loop="" preload="auto" id="song" src=younevercantell.mp3 type="audio/mp3"></audio>
     <style>
       #body{
-        background-color:#72D253;
+        background-color:black;
+      }
+      #canvas{
+        position:fixed;
+        display:block;
+        width:100%;
+        height:100%;
+        left:0;
+        top:0;
       }
     </style>
     <script>
+      var spotPos=[],spotVel=[],spotSize=[],spotCols=[];
+      var spotNo=300;
+      for (i=0;i<spotNo;i++){
+        spotPos.push(Math.random()*window.innerWidth,Math.random()*window.innerHeight);
+        spotVel.push(Math.random()*6-3,Math.random()*6-3);
+        spotSize.push(Math.random()*70+30);
+        spotCols.push(Math.floor(Math.random()*155+100),Math.floor(Math.random()*155+100),Math.floor(Math.random()*155+100));
+      }
+      document.getElementById("canvas").width=window.innerWidth;
+      document.getElementById("canvas").height=window.innerHeight;
       document.getElementById("song").play();
+      
+      function moveSpots(){
+        var ctx = document.getElementById("canvas").getContext("2d");
+        ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
+        for (i=0;i<spotNo;i++){
+          ctx.fillStyle="rgba("+spotCols[i*3]+","+spotCols[i*3+1]+","+spotCols[i*3+2]+",0.5)";
+          ctx.beginPath();
+          ctx.arc(spotPos[i*2]-spotSize[i]/2,spotPos[i*2+1]-spotSize[i]/2,spotSize[i],0,2*Math.PI);
+          ctx.fill();
+        }
+      }
+      setInterval(moveSpots,25);
     </script>
   </head>
   <body id="body">
+    <canvas id="canvas"></canvas>
   </body>
 </html>
