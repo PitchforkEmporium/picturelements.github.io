@@ -42,7 +42,7 @@
       function moveSpots(){
         document.getElementById("canvas").width=window.innerWidth;
         document.getElementById("canvas").height=window.innerHeight;
-        document.getElementById("fools").style.lineHeight=window.innerHeight;
+        document.getElementById("fools").style.lineHeight=window.innerHeight/2;
         var ctx = document.getElementById("canvas").getContext("2d");
         ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
         for (i=0;i<spotNo;i++){
