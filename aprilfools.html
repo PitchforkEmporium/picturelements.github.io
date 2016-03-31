@@ -33,13 +33,13 @@
         for (i=0;i<spotNo;i++){
           ctx.fillStyle="rgba("+spotCols[i*3]+","+spotCols[i*3+1]+","+spotCols[i*3+2]+",0.5)";
           ctx.beginPath();
-          ctx.arc(spotPos[i*2]-spotSize[i],spotPos[i*2+1]-spotSize[i],spotSize[i],0,2*Math.PI);
+          ctx.arc(spotPos[i*2],spotPos[i*2+1],spotSize[i],0,2*Math.PI);
           ctx.fill();
           spotPos[i*2]+=spotVel[i*2];
           spotPos[i*2+1]+=spotVel[i*2+1];
           if (spotPos[i*2]>window.innerWidth+spotSize[i]){spotPos[i*2]=-spotSize[i];}
           if (spotPos[i*2]<-spotSize[i]){spotPos[i*2]=window.innerWidth+spotSize[i];}
-          if (spotPos[i*2+1]>window.innerHeight+spotSize[i]/2){spotPos[i*2+1]=-spotSize[i];}
+          if (spotPos[i*2+1]>window.innerHeight+spotSize[i]){spotPos[i*2+1]=-spotSize[i];}
           if (spotPos[i*2+1]<-spotSize[i]){spotPos[i*2+1]=window.innerHeight+spotSize[i];}
         }
       }
