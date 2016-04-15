@@ -4,11 +4,11 @@
       #input,#btn{
         display:block;
         position:fixed;
-        width:50%;
+        width:70%;
         height:10%;
         top:50%;
         left:50%;
-        margin-left:-25%;
+        margin-left:-35%;
         margin-top:-5%;
         text-align: center;
         font-size: 3vw;
@@ -38,6 +38,7 @@
         document.getElementById("input").style.height=""+(window.innerWidth/20)+"px";
         document.getElementById("input").style.marginTop="-"+(window.innerWidth/20+20)+"px";
         document.getElementById("btn").style.height=""+(window.innerWidth/40)+"px";
+        random();
       }
       function random(){
         var legalChars="0123456";
@@ -45,6 +46,7 @@
         for (i=0;i<7;i++){
           var tmp=legalChars.charAt(Math.floor(Math.random()*legalChars.length));
           result+=phrase[parseInt(tmp)];
+          if (i<6){result+=" ";}
           var tmp2="";
           for (n=0;n<legalChars.length;n++){
             if (legalChars.charAt(n)!=tmp){
