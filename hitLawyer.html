@@ -1,7 +1,7 @@
 <html>
   <head>
     <style>
-      #input{
+      #input,#btn{
         display:block;
         position:fixed;
         width:50%;
@@ -11,15 +11,25 @@
         margin-left:-25%;
         margin-top:-5%;
       }
+      #btn{
+        display:block;
+        position:fixed;
+        width:10%;
+        left:50%;
+        top:50%;
+        margin-left:-5%;
+        margin-top:50px;
+      }
     </style>
     <script>
       function setup(){
-        document.getElementById("input").style.height=""+(window.innerWidth/10)+"px";
-        document.getElementById("input").style.marginTop="-"+(window.innerWidth/20)+"px";
+        document.getElementById("input").style.height=""+(window.innerWidth/20)+"px";
+        document.getElementById("input").style.marginTop="-"+(window.innerWidth/20-50)+"px";
       }
     </script>
   </head>
   <body style="background-color:#222" onload=setup()>
     <input id="input"></input>
+    <button id="btn">New copypasta!</button>
   </body>
 </html>
