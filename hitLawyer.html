@@ -23,19 +23,23 @@
         left:50%;
         top:50%;
         margin-left:-5%;
-        margin-top:100px;
+        margin-top:20px;
         font-size:50%;
       }
     </style>
     <script>
       function setup(){
         document.getElementById("input").style.height=""+(window.innerWidth/20)+"px";
-        document.getElementById("input").style.marginTop="-"+(window.innerWidth/20+100)+"px";
+        document.getElementById("input").style.marginTop="-"+(window.innerWidth/20+20)+"px";
+        document.getElementById("btn").style.height=""+(window.innerWidth/40)+"px";
+      }
+      function random(){
+        
       }
     </script>
   </head>
   <body style="background-color:#222" onload=setup()>
     <input id="input"></input>
-    <button id="btn">New copypasta!</button>
+    <button id="btn" onclick=random()>New copypasta!</button>
   </body>
 </html>
