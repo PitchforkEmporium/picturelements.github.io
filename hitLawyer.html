@@ -44,7 +44,7 @@
         result="";
         for (i=0;i<7;i++){
           var tmp=legalChars.charAt(Math.floor(Math.random()*legalChars.length));
-          result+=phrase[Integer.parseInt(tmp)];
+          result+=phrase[parseInt(tmp)];
           var tmp2="";
           for (n=0;n<legalChars.length;n++){
             if (legalChars.charAt(n)!=tmp){
