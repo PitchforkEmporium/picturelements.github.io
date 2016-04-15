@@ -32,13 +32,28 @@
       }
     </style>
     <script>
+      var phrase=["lawyer","up","delete","the","gym","hit","facebook"];
+      var result;
       function setup(){
         document.getElementById("input").style.height=""+(window.innerWidth/20)+"px";
         document.getElementById("input").style.marginTop="-"+(window.innerWidth/20+20)+"px";
         document.getElementById("btn").style.height=""+(window.innerWidth/40)+"px";
       }
       function random(){
-        
+        var legalChars="0123456";
+        result="";
+        for (i=0;i<7;i++){
+          var tmp=legalChars.charAt(Math.floor(Math.random()*legalChars.length));
+          result+=phrase[Integer.parseInt(tmp)];
+          var tmp2="";
+          for (n=0;n<legalChars.length;n++){
+            if (legalChars.charAt(n)!=tmp){
+              tmp2+=legalChars.charAt(n);
+            }
+          }
+          legalChars=tmp2;
+        }
+        document.getElementById("input").value=result;
       }
     </script>
   </head>
