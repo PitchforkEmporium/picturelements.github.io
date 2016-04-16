@@ -33,12 +33,14 @@
     </style>
     <script>
       var phrase=["lawyer","up","delete","the","gym","hit","facebook"];
-      var testimonials=["It's so useless it's stupid - Mom","This site changed my life! I'm now hated by everybody in my delete chat. - Jimmy"];
+      var testimonials=["It's so useless it's stupid - Mom","This site changed my life! I'm now hated by everybody in my delete chat. - Jimmy",
+      "Instructions unclear. Gym caught in toaster. - Kevin"];
       var result;
       function setup(){
         document.getElementById("input").style.height=""+(window.innerWidth/20)+"px";
         document.getElementById("input").style.marginTop="-"+(window.innerWidth/20+20)+"px";
         document.getElementById("btn").style.height=""+(window.innerWidth/40)+"px";
+        document.getElementById("mainTest").innerHTML=testimonials[Math.floor(Math.random()*3)];
         random();
       }
       function random(){
@@ -65,7 +67,7 @@
     <button id="btn" onclick=random()>New copypasta!</button>
     <testimonials style="position:fixed; display:block; width:100%; height:150px; bottom:0; text-align:center; font-family:Trebuchet MS,Arial,sans-serif; color:#888; font-size:2vw">
       Testimonials
-      <div id="mainTest" style="display:block; position:absolute; top:4vw; color:#aaa">
+      <div id="mainTest" style="display:block; position:absolute; top:4vw; color:#aaa; width: 100%; height: 50%;">
         
       </div>
     </testimonials>
