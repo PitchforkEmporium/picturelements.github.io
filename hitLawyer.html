@@ -48,16 +48,16 @@
         var legalChars="0123456";
         result="";
         for (i=0;i<7;i++){
-          var tmp=legalChars.charAt(Math.floor(Math.random()*legalChars.length));
-          result+=phrase[parseInt(tmp)];
-          if (i<6){result+=" ";}
-          var tmp2="";
+          var pos=legalChars.charAt(Math.floor(Math.random()*legalChars.length));
+          result+=phrase[parseInt(pos)];
+          if (i<6){result+=" ";}  //add a space between the words
+          var newString="";
           for (n=0;n<legalChars.length;n++){
-            if (legalChars.charAt(n)!=tmp){
-              tmp2+=legalChars.charAt(n);
+            if (legalChars.charAt(n)!=pos){
+              newString+=legalChars.charAt(n);
             }
           }
-          legalChars=tmp2;
+          legalChars=newString;
         }
         document.getElementById("input").value=result;
       }
@@ -68,9 +68,7 @@
     <button id="btn" onclick=random()>New copypasta!</button>
     <testimonials style="position:fixed; display:block; width:100%; height:100px; bottom:0; left:0; text-align:center; font-family:Trebuchet MS,Arial,sans-serif; color:#888; font-size:1.6vw">
       Testimonials
-      <div id="mainTest" style="display:block; position:absolute; top:3vw; color:#aaa; width: 100%; height: 50%;">
-        
-      </div>
+      <div id="mainTest" style="display:block; position:absolute; top:3vw; color:#aaa; width: 100%; height: 50%;"></div>
     </testimonials>
   </body>
 </html>
