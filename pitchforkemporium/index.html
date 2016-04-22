@@ -18,6 +18,9 @@
           id3[i].style.fontSize=""+size/256*10+"px";
         }
       }
+      window.onresize = function(event) {
+        setSize();
+      };
     </script>
   </head>
   <body onload=setSize()>
