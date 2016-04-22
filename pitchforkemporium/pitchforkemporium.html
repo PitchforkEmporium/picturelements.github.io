@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,900' rel='stylesheet' type='text/css'>
+    <link href='pitchfork.css' rel='stylesheet' type='text/css'>
+    <script>
+      var size;
+      function setSize(){
+        size=window.innerWidth*0.9*0.225*1.5;
+        var ids=document.getElementsByClassName("item");
+        var id2=document.getElementsByClassName("showcase");
+        var id3=document.getElementsByClassName("desc");
+        for (i=0;i<ids.length-1;i++){
+          ids[i].style.height=""+size+"px";
+          id2[i].style.lineHeight=""+size/2+"px";
+          id2[i].style.fontSize=""+size/256*50+"px";
+          id3[i].style.marginTop=""+size*0.55+"px";
+          id3[i].style.fontSize=""+size/256*10+"px";
+        }
+      }
+    </script>
+  </head>
+  <body onload=setSize()>
+    <div id="wrapper">
+      <div id="header">
+        Pitchfork Emporium
+        <div id="subtitle">Premium source of anti-OP wares</div>
+      </div>
+      <div id="content"></div>
+        <div id="displayBox">
+          <div class="item">
+            <a href="https://www.youtube.com/" target="_blank">
+              <div class="showcase">---E</div>
+              <div class="desc"><b>Traditional</b><br><br>The classic pitchfork! Repel bundles of sticks and filthy liars with ease! 42-month warranty.</div>
+            </a>
+          </div>
+          <div class="item">
+            <div class="showcase">Ǝ---</div>
+            <div class="desc"><b>Left Handed</b><br><br>Let the hate flow through all people! Handle made of special left handed isomer wood.</div>
+          </div>
+          <div class="item">
+            <div class="showcase">---{</div>
+            <div class="desc"><b>Fancy</b><br><br>Manufactured by the smith of Versailles, this is the pitchfork for the real connaisseur that dwells within all neckbeards.</div>
+          </div>
+          <div class="item">
+            <div class="showcase">---F</div>
+            <div class="desc"><b>33% Off!</b><br><br>Too much money spent on anti-OP insurance? This is the budget pitchfork for you! Almost as deadly, 67% effective.</div>
+          </div>
+          <div class="item">
+            <div class="showcase">---L</div>
+            <div class="desc"><b>66% Off!</b><br><br>Too much money spent on 33% off pitchforks? This is the budget pitchfork for you! Almost as deadly, 33% effective.</div>
+          </div>
+          <div class="item">
+            <div class="showcase">---e</div>
+            <div class="desc"><b>Manufacturer's Defect!</b><br><br>Not all pitchforks are created equal. Some are more special than others!</div>
+          </div>
+          <div class="item">
+            <div class="showcase">---€</div>
+            <div class="desc"><b>The Euro</b><br><br>Fresh in from Europe! Beret, sleeping spaniard, knödel, and pasta included.</div>
+          </div>
+          <div class="item">
+            <div class="showcase">---£</div>
+            <div class="desc"><b>The Pound</b><br><br>"Oi m8, u 'avin a giggle? I'mma do ur fookin 'ead in, I swer on me gran!"</div>
+          </div>
+          <div class="item">
+            <div class="showcase">---₤</div>
+            <div class="desc"><b>The Lira</b><br><br>Fresh in from Turkey! Made of kebab and stringy ice cream. Delivered in a styrofoam box.</div>
+          </div>
+          <!--spacer-->
+          <div class="item" style="height:0px; width:80% "></div>
+        </div>
+      <div id="footer">
+        <inner>
+          Pitchfork Emporium reserves the right to test-stab OP before wares are shipped. Any damages induced during stabbing will be repaired by the Pitchfork Emporium repairs and replacement division free of charge. Pitchforks misused to move or stack hay void all warranty.
+          <br><br>
+          © 2016 Pitchfork Emporium Industries
+        </inner>
+      </div>
+    </div>
+  </body>
+</html>
