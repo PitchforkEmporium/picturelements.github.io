@@ -23,7 +23,7 @@ body{
 }
 
 #name a:hover{
-  text-shadow: 10px 10px 2px #961F1F;
+  text-shadow: 10px 10px 10px #961F1F;
   transition:300ms;
 }
 
