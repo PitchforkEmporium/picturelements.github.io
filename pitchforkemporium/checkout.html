@@ -31,7 +31,7 @@
           var totSum;
           for (i=0;i<pitchforks.length;i++){
             outStr+="<tr><td>"+pitchforks[i]+"</td><td>"+info[i]+"</td><td>42 karma</td><td>"+no[i]+"</td><td>"+42*no[i]+" karma</td></tr>";
-            totSum+=42*no[i];
+            totSum+=42*parseInt(no[i]);
           }
           outStr+="</table><br><br><table><tr><th>Total quantity</th><th>Grand total</th></tr><tr><td>"+items+"</td><td>"+totSum+"</td></tr></table>";
           document.getElementById("displayBox").innerHTML=outStr;
