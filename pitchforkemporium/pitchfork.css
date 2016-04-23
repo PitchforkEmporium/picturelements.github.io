@@ -169,3 +169,7 @@ table tb{
   border-left:1px solid #aaa;
   border-right:1px solid #aaa;
 }
+
+table{
+  font-size:1.5vw;
+}
