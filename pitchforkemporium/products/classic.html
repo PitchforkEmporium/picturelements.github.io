@@ -94,14 +94,14 @@
       for (i=0;i<items;i++){
         sessionStorage.removeItem("item"+i);
       }
-      document.getElementyId("cartInfo").innerHTML="Your cart (0)";
+      document.getElementById("cartInfo").innerHTML="Your cart (0)";
     }
     
     function setCart(){
       sessionStorage.setItem("item"+items,document.getElementById("mainDisplay").innerHTML);
       console.log(sessionStorage.getItem("item"+items));
       items++;
-      document.getElementyId("cartInfo").innerHTML="Your cart ("+items+")";
+      document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
     }
   </script>
   <body onload=setInfo()>
