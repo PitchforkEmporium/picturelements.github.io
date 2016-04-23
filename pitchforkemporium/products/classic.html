@@ -43,10 +43,20 @@
     }
     b{
       font-weight:900;
+    }
+    #prodName{
+      font-weight:900;
       font-size:150%;
     }
   </style>
-  <body>
+  <script>
+    function setInfo(){
+      var id=""+window.location.href;
+      var idFull=parseInt(id.charAt(id.length-2)+""+id.charAt(id.length-1));
+      console.log(idFull);
+    }
+  </script>
+  <body onload=setInfo()>
     <div id="wrapper">
       <div id="header">
         Pitchfork Emporium
@@ -56,7 +66,7 @@
         <div id="displayBox">
           <div id="mainDisplay">---E</div>
           <div id="mainDesc">
-            <inset><b>Traditional pitchfork</b><br>Inset information here!</inset>
+            <inset><div id="prodName">JavaScript disabled</div><br><div id="prodID">JavaScript disabled</div></inset>
           </div>
           <spacer style="display:block; position:relative; width:100%; height:4.5vw;"></spacer>
         </div>  
