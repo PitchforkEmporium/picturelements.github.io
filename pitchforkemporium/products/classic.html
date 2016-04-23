@@ -76,6 +76,7 @@
       var id=""+window.location.href;
       var idFull=parseInt(id.charAt(id.length-2)+""+id.charAt(id.length-1))-1;
       set(idFull);
+      document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
     }
     
     function set(setID){
