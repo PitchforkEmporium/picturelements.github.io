@@ -161,6 +161,7 @@ table tr:nth-child(odd){
 }
 
 table{
+  position: relative;
   font-size:1.5vw;
   width:90%;
   left:5%;
