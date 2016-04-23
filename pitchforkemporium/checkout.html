@@ -27,9 +27,10 @@
               no.push(1);
             }
           }
-          var outStr="";
+          var outStr="<table style="width:100%"><th>Type</th><th>Qty</th>";
           for (i=0;i<pitchforks.length;i++){
-            outStr+=pitchforks[i]+" x"+no[i]+"<br>";
+            //outStr+=pitchforks[i]+" x"+no[i]+"<br>";
+            outStr+="<tr><td>"+pitchforks[i]+"</td><td>"+no[i]+"</td></tr>";
           }
           document.getElementById("checkInner").innerHTML=outStr;
         }
