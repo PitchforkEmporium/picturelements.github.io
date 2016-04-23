@@ -4,17 +4,29 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,900' rel='stylesheet' type='text/css'>
     <link href='pitchfork.css' rel='stylesheet' type='text/css'>
     <script>
+      function setCart(){
+        var pitchforks=[];
+        var no=[];
+        var items=0;
+        items=sessionStorage.getItem("items");
+        if (items==null){items=0;}
+        
+        if (items==0){
+          document.getElementById("checkInner").innerHTML="<br><br><br><br>Cart empty<br><br><br><br>";
+          document.getElementById("checkInner").style.textAlign="center";
+        }
+      }
     </script>
   </head>
-  <body onload=setSize()>
+  <body onload=setCart()>
     <div id="wrapper">
       <div id="header">
         Pitchfork Emporium
         <div id="subtitle">Premium source of anti-OP wares</div>
       </div>
       <div id="content">
-        <div id="displayBox">
-          Hello.
+        <div id="displayBox" style="margin-top:50px">
+          <div id="checkInner" style="display:block; position:absolute; width:90%; height:90%; top:5%; left:5%; font-family:Roboto,Arial,sans-serif; font-weight:900;"></div>
         </div>
       </div>
       <div id="footer">
