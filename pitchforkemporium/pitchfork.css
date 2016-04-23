@@ -162,4 +162,7 @@ table tr:nth-child(odd){
 
 table{
   font-size:1.5vw;
+  width:90%;
+  left:5%;
+  border: 2px solid #ccc;
 }
