@@ -27,10 +27,10 @@
               no.push(1);
             }
           }
-          var outStr="<table style=\"width:100%\"><tr><th>Type</th><th>Qty</th></tr>";
+          var outStr="<table style=\"width:100%\"><tr><th>Type</th><th>Type</th><th>Price</th><th>Quantity</th><th>Total</th></tr>";
           for (i=0;i<pitchforks.length;i++){
             //outStr+=pitchforks[i]+" x"+no[i]+"<br>";
-            outStr+="<tr><td>"+pitchforks[i]+"</td><td>"+no[i]+"</td></tr>";
+            outStr+="<tr><td>"+pitchforks[i]+"</td><td>42 karma</td><td>"+no[i]+"</td><td>"+42*no[i]+" karma</td></tr>";
           }
           outStr+="</table>";
           document.getElementById("checkInner").innerHTML=outStr;
