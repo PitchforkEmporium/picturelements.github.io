@@ -5,8 +5,7 @@
     <link href='pitchfork.css' rel='stylesheet' type='text/css'>
     <script>
       function setCart(){
-        var pitchforks=[];
-        var no=[];
+        var pitchforks=[],info=[],no=[];
         var items=0;
         items=sessionStorage.getItem("items");
         if (items==null){items=0;}
@@ -24,13 +23,13 @@
             }
             if (isDuplicate==0){
               pitchforks.push(check);
+              info.push(sessionStorage.getItem("info"+i));
               no.push(1);
             }
           }
           var outStr="<table style=\"width:100%\"><tr><th>Type</th><th>Type</th><th>Price</th><th>Quantity</th><th>Total</th></tr>";
           for (i=0;i<pitchforks.length;i++){
-            //outStr+=pitchforks[i]+" x"+no[i]+"<br>";
-            outStr+="<tr><td>"+pitchforks[i]+"</td><td>42 karma</td><td>"+no[i]+"</td><td>"+42*no[i]+" karma</td></tr>";
+            outStr+="<tr><td>"+pitchforks[i]+"</td><td>"+info[i]+"</td><td>42 karma</td><td>"+no[i]+"</td><td>"+42*no[i]+" karma</td></tr>";
           }
           outStr+="</table>";
           document.getElementById("checkInner").innerHTML=outStr;
