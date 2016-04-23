@@ -65,6 +65,7 @@
   <script>
     var items=0;
     items=sessionStorage.getItem("items");
+    if (items==null){items=0;}
     var pitchforks=["---E","Ǝ---","---{"];
     var names=["Traditional Pitchfork","Left Handed Pitchfork","Fancy Pitchfork"];
     var ids=["CL - PF001","CL - PF002","CL - PF003"];
@@ -95,6 +96,9 @@
       for (i=0;i<items;i++){
         sessionStorage.removeItem("item"+i);
       }
+      sessionStorage.removeItem("items");
+      sessionStorage.addItem("items",0);
+      items=0;
       document.getElementById("cartInfo").innerHTML="Your cart (0)";
     }
     
