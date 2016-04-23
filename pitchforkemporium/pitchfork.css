@@ -108,7 +108,7 @@ inner{
   font-weight:900;
 }
 
-a{
+.item a{
   display:block;
   position:absolute;
   width:100%;
