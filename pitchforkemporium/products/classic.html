@@ -73,6 +73,7 @@
       "Let those left-handed people join in on the hate! Don't hinder anyone from getting OP! It's a basic human right to heckle those who have done wrong and reposted stuff from the top 10 most popular posts.<br><br>Tip: Buy a <a onclick=moar(0)>right-handed one</a> as well! Twice the chance of getting OP!",
       "That wretched \"Original poster\" scoundrel shall feel our wrath! It is indeed correct, dear customer, that thit \"Original Poster\" swine is a compiled set of twigs, and shall be punished for his misdeeds as reposteur and liar! Pitchfork comes equipped with Charles, the best pitchfork-flailing servant in England!"
     ];
+    
     function setInfo(){
       var id=""+window.location.href;
       var idFull=parseInt(id.charAt(id.length-2)+""+id.charAt(id.length-1))-1;
@@ -95,6 +96,7 @@
     function clearCart(){
       for (i=0;i<items;i++){
         sessionStorage.removeItem("item"+i);
+        sessionStorage.removeItem("info"+i);
       }
       sessionStorage.setItem("items",0);
       items=0;
@@ -103,7 +105,7 @@
     
     function setCart(){
       sessionStorage.setItem("item"+items,document.getElementById("mainDisplay").innerHTML);
-      console.log(sessionStorage.getItem("item"+items));
+      sessionStorage.setItem("info"+items,document.getElementById("prodName").innerHTML);
       items++;
       sessionStorage.setItem("items",items);
       document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
