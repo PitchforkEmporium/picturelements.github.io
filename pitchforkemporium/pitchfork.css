@@ -153,21 +153,11 @@ inner{
 }
 
 table tr:nth-child(even){
-  background-color: #f1f1f1;
+  background-color: #FFD9D9;
 }
 
 table tr:nth-child(odd){
   background-color:white; 
-}
-
-table tr{
-  border-top:1px solid #aaa;
-  border-bottom:1px solid #aaa;
-}
-
-table tb{
-  border-left:1px solid #aaa;
-  border-right:1px solid #aaa;
 }
 
 table{
