@@ -96,8 +96,7 @@
       for (i=0;i<items;i++){
         sessionStorage.removeItem("item"+i);
       }
-      sessionStorage.removeItem("items");
-      sessionStorage.addItem("items",0);
+      sessionStorage.setItem("items",0);
       items=0;
       document.getElementById("cartInfo").innerHTML="Your cart (0)";
     }
