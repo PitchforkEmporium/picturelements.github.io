@@ -57,7 +57,7 @@
     var names=["Traditional Pitchfork","Left Handed Pitchfork","Fancy Pitchfork"];
     var ids=["CL - PF001","CL - PF002","CL - PF003"];
     var descs=["The traditional pitchfork! As seen in \"Frankenstein's monster\", \"Shrek\", and many comment sections of OP's submissions! This pitchfork is versatile and simple, and compatible with all OS and browsers, even IE!",
-      "Let those left-handed people join in on the hate! Don't hinder anyone from getting OP! It's a basic human right to heckle those who have done wrong and reposted stuff from the top 10 most popular posts.<br>Bonus: Buy a <a href=\"classic#PF001\">right-handed one</a> as well! Twice the chance of getting OP!",
+      "Let those left-handed people join in on the hate! Don't hinder anyone from getting OP! It's a basic human right to heckle those who have done wrong and reposted stuff from the top 10 most popular posts.<br>Bonus: Buy a <a onclick=moar(#PF001)\">right-handed one</a> as well! Twice the chance of getting OP!",
       "That wretched \"Original poster\" scoundrel shall feel our wrath! It is indeed correct, dear customer, that thit \"Original Poster\" swine is a compiled set of twigs, and shall be punished for his misdeeds as reposteur and liar! Pitchfork comes equipped with Charles, the best pitchfork-flailing servant in England!"
     ];
     function setInfo(){
@@ -67,6 +67,10 @@
       document.getElementById("prodName").innerHTML=names[idFull];
       document.getElementById("prodID").innerHTML=ids[idFull];
       document.getElementById("prodDesc").innerHTML=descs[idFull];
+    }
+    function moar(url){
+      window.location.href=url;
+      setInfo();
     }
   </script>
   <body onload=setInfo()>
