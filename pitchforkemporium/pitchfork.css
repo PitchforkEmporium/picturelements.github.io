@@ -8,6 +8,7 @@ body{
   height:15vw;
   background-color: #c1272d;
   box-shadow:0 15px 25px rgba(0,0,0,0.3);
+  text-shadow: 5px 5px 0 #961F1F;
   text-align:center;
   color:#eee;
   font-family:Kaushan Script,Arial,sans-serif;
