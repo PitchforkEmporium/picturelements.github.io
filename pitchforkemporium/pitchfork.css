@@ -151,3 +151,11 @@ inner{
   margin-left: 10px;
   cursor: pointer;
 }
+
+table tr:nth-child(even){
+  background-color: #f1f1f1;
+}
+
+table tr:nth-child(even){
+  background-color:white; 
+}
