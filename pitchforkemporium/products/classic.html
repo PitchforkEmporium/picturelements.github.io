@@ -63,6 +63,8 @@
     }
   </style>
   <script>
+    var items=0;
+    items=sessionStorage.getItem("items");
     var pitchforks=["---E","Ǝ---","---{"];
     var names=["Traditional Pitchfork","Left Handed Pitchfork","Fancy Pitchfork"];
     var ids=["CL - PF001","CL - PF002","CL - PF003"];
@@ -88,6 +90,18 @@
       set(inID);
     }
     
+    function clearCart(){
+      for (i=0;i<items;i++){
+        sessionStorage.removeItem("item"+i);
+      }
+      document.getElementyId("cartInfo").innerHTML="Your cart (0)";
+    }
+    
+    function setCart(){
+      sessionStorage.setItem("item"+items,document.getElementById("mainDisplay").innerHTML);
+      console.log(sessionStorage.getItem("item"+items));
+      items++;
+    }
   </script>
   <body onload=setInfo()>
     <div id="wrapper">
@@ -98,9 +112,9 @@
       <div id="content"></div>
         <div id="cart">
           <div id="cartInfo">Your cart (0)</div>
-          <div id="crtBtn">clear</div>
-          <div id="crtBtn">
-            <a href="http://picturelements.github.io/pitchforkemporium/checkout" style="color:white; text-decoration:none">checkout</a>
+          <div id="crtBtn" onclick=clearCart()>clear</div>
+          <div id="crtBtn" onclick=setCart()>
+            <!--<a href="http://picturelements.github.io/pitchforkemporium/checkout" style="color:white; text-decoration:none">checkout</a>-->
           </div>
         </div>
         <div id="displayBox">
