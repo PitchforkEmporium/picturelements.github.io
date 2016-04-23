@@ -28,10 +28,12 @@
             }
           }
           var outStr="<table><tr><th>Type</th><th>Model number</th><th>Price</th><th>Quantity</th><th>Total</th></tr>";
+          var totSum;
           for (i=0;i<pitchforks.length;i++){
             outStr+="<tr><td>"+pitchforks[i]+"</td><td>"+info[i]+"</td><td>42 karma</td><td>"+no[i]+"</td><td>"+42*no[i]+" karma</td></tr>";
+            totSum+=42*no[i];
           }
-          outStr+="</table>";
+          outStr+="</table><br><br><table><tr><th>Total quantity</th><tr><th>Grand total</th></tr><tr><td>"+items+"</td><td>"+totSum+"</td></tr></table>";
           document.getElementById("displayBox").innerHTML=outStr;
         }
       }
