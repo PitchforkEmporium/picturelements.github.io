@@ -101,6 +101,7 @@
       sessionStorage.setItem("item"+items,document.getElementById("mainDisplay").innerHTML);
       console.log(sessionStorage.getItem("item"+items));
       items++;
+      document.getElementyId("cartInfo").innerHTML="Your cart ("+items+")";
     }
   </script>
   <body onload=setInfo()>
