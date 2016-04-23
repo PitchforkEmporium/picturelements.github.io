@@ -102,6 +102,7 @@
       sessionStorage.setItem("item"+items,document.getElementById("mainDisplay").innerHTML);
       console.log(sessionStorage.getItem("item"+items));
       items++;
+      sessionStorage.setItem("items",items);
       document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
     }
   </script>
