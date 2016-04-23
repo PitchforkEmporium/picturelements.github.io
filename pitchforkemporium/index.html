@@ -4,6 +4,9 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,900' rel='stylesheet' type='text/css'>
     <link href='pitchfork.css' rel='stylesheet' type='text/css'>
     <script>
+      var items=0;
+      items=sessionStorage.getItem("items");
+      if (items==null){items=0;}
       var size;
       function setSize(){
         size=window.innerWidth*0.9*0.225*1.5;
@@ -17,10 +20,20 @@
           id3[i].style.marginTop=""+size*0.55+"px";
           id3[i].style.fontSize=""+size/256*10+"px";
         }
+        document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
       }
       window.onresize = function(event) {
         setSize();
       };
+      
+      function clearCart(){
+        for (i=0;i<items;i++){
+          sessionStorage.removeItem("item"+i);
+        }
+        sessionStorage.setItem("items",0);
+        items=0;
+        document.getElementById("cartInfo").innerHTML="Your cart (0)";
+      }
     </script>
   </head>
   <body onload=setSize()>
