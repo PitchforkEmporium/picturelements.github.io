@@ -61,17 +61,6 @@
       color:#22f;
       cursor:pointer;
     }
-    
-    #crtBtn{
-      display:block;
-      position:relative;
-      float:left;
-      padding:5px;
-      border-radius:3px;
-      color:white;
-      background-color:#008;
-      margin-left:10px;
-    }
   </style>
   <script>
     var pitchforks=["---E","Ǝ---","---{"];
@@ -107,7 +96,11 @@
         <div id="subtitle">Premium source of anti-OP wares</div>
       </div>
       <div id="content"></div>
-        <div id="cart">Your cart (0)<div id="crtBtn">clear</div><div id="crtBtn">checkout</div></div>
+        <div id="cart">
+          <div id="cartInfo">Your cart (0)</div>
+          <div id="crtBtn">clear</div>
+          <div id="crtBtn">checkout</div>
+        </div>
         <div id="displayBox">
           <div id="mainDisplay">JS Disabled</div>
           <div id="mainDesc">
