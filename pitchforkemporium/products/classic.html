@@ -102,6 +102,13 @@
       document.getElementById("prodID").innerHTML=ids[setID];
       document.getElementById("prodDesc").innerHTML=descs[setID];
       document.getElementById("price").innerHTML=sum+" karma";
+      
+      //table-specific
+      document.getElementById("tPrice").innerHTML=sum+" karma";
+      document.getElementById("tModel").innerHTML=ids[setID];
+      document.getElementById("tLength").innerHTML=""+pitch.length*43.52+" in";
+      document.getElementById("tWeight").innerHTML=""+Math.floor(pitch.length*43.52*17)/1000.0+" kg";
+      document.getElementById("tWarranty").innerHTML=""+(sum%7+2)+" yrs";
     }
     
     function moar(inID){
@@ -175,7 +182,7 @@
                 <td id="tWarranty">JS disabled</td>
               </tr>
             </table>
-            <div id="crtBtn" style="position:absolute; font-family:Roboto,Arial,sans-serif; bottom:2vw; right:2vw; cursor:pointer; z-index:100; width: 16.5vw; height: 3vw; line-height: 3vw; font-size: 2vw;" onclick=setCart()>Add to cart</div>
+            <div id="crtBtn" style="position:absolute; font-family:Roboto,Arial,sans-serif; bottom:2vw; right:2vw; cursor:pointer; z-index:100; width: 16.5vw; height: 3vw; line-height: 3vw; font-size: 2vw; text-align: center;" onclick=setCart()>Add to cart</div>
           </div>
           <spacer style="display:block; position:relative; width:100%; height:4.5vw;"></spacer>
         </div>  
