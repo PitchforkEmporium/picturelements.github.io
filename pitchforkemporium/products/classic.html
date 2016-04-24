@@ -116,12 +116,14 @@
     }
     
     function setItems(setID){
-      var no=0;
+      var no=0,tot=0;
       for (i=0;i<items;i++){
         if (sessionStorage.getItem("item"+i)==pitchforks[setID]&&sessionStorage.getItem("item"+i)!=""){no++;}
+        if (sessionStorage.getItem("item"+i)!=""){tot++;}
       }
       document.getElementById("tItems").innerHTML=no;
       document.getElementById("tTotal").innerHTML=no*sum;
+      document.getElementById("cartInfo").innerHTML="Your cart ("+tot+")";
       if (no==0){
         document.getElementsByClassName("add")[0].style.width="24.4vw";
         document.getElementsByClassName("add")[0].style.right="2vw";
