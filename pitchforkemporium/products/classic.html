@@ -91,7 +91,6 @@
     function setInfo(){
       var id=""+window.location.href;
       idFull=parseInt(id.charAt(id.length-2)+""+id.charAt(id.length-1))-1;
-      document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
       set(idFull);
     }
     
@@ -127,6 +126,9 @@
       if (no==0){
         document.getElementsByClassName("add")[0].style.width="24.4vw";
         document.getElementsByClassName("add")[0].style.right="2vw";
+      }else{
+        document.getElementsByClassName("add")[0].style.width="17.9vw";
+        document.getElementsByClassName("add")[0].style.right="8.4vw";
       }
     }
     
@@ -152,8 +154,6 @@
       items++;
       sessionStorage.setItem("items",items);
       document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
-      document.getElementsByClassName("add")[0].style.width="17.9vw";
-      document.getElementsByClassName("add")[0].style.right="8.4vw";
       setItems(idFull);
     }
     
