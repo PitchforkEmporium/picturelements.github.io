@@ -7,7 +7,7 @@
     <script>
       function setCart(){
         var pitchforks=[],info=[],no=[];
-        var items=0;
+        var items=0,tot=0;
         items=sessionStorage.getItem("items");
         if (items==null){items=0;}
         
@@ -20,8 +20,10 @@
             var check=sessionStorage.getItem("item"+i);
             isDuplicate=0;
             for (n=0;n<pitchforks.length;n++){
-              if (check==pitchforks[n]){isDuplicate=1; no[n]++; break;}
+              if (check==pitchforks[n]%%check!=""){isDuplicate=1; no[n]++; break;}
             }
+            if (check!=""){tot++;}
+            else {isDuplicate=1;}
             if (isDuplicate==0){
               pitchforks.push(check);
               info.push(sessionStorage.getItem("info"+i));
