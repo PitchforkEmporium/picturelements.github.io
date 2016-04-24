@@ -164,7 +164,7 @@ inner{
   cursor: pointer;
 }
 
-#crtBtn::selection{
+#crtBtn::selection,#crtBtn a::selection{
   background-color:transparent;
 }
 
