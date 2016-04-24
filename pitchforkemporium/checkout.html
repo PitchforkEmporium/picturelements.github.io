@@ -20,7 +20,7 @@
             var check=sessionStorage.getItem("item"+i);
             isDuplicate=0;
             for (n=0;n<pitchforks.length;n++){
-              if (check==pitchforks[n]%%check!=""){isDuplicate=1; no[n]++; break;}
+              if (check==pitchforks[n]&&check!=""){isDuplicate=1; no[n]++; break;}
             }
             if (check!=""){tot++;}
             else {isDuplicate=1;}
