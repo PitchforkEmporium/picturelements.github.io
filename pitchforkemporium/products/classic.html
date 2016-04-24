@@ -122,6 +122,10 @@
       }
       document.getElementById("tItems").innerHTML=no;
       document.getElementById("tTotal").innerHTML=no*sum;
+      if (no==0){
+        document.getElementsByClassName("add")[0].style.width="24.4vw";
+        document.getElementsByClassName("add")[0].style.right="2vw";
+      }
     }
     
     function moar(inID){
@@ -146,8 +150,18 @@
       items++;
       sessionStorage.setItem("items",items);
       document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
-      document.getElementsByClassName("add")[0].style.width="18.6vw";
-      document.getElementsByClassName("add")[0].style.right="7.8vw";
+      document.getElementsByClassName("add")[0].style.width="17.9vw";
+      document.getElementsByClassName("add")[0].style.right="8.4vw";
+      setItems(idFull);
+    }
+    
+    function removeCart(){
+      for (i=0;i<items;i++){
+        if (sessionStorage.getItem("item"+i)==pitchforks[idFull]){
+          sessionStorage.setItem("item"+i,"");
+          break;
+        }
+      }
       setItems(idFull);
     }
   </script>
