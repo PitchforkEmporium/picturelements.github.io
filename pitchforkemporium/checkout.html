@@ -11,7 +11,11 @@
         items=sessionStorage.getItem("items");
         if (items==null){items=0;}
         
-        if (items==0){
+        
+        for (i=0;i<items;i++){
+          if (check!=""){tot++;}
+        }
+        if (tot==0){
           document.getElementById("displayBox").style="text-align:center; font-size:5vw; height:500px; line-height:500px; font-family:Roboto,Arial,sans-serif; font-weight:900;";
           document.getElementById("displayBox").innerHTML="Cart empty";
         }else{
@@ -22,8 +26,7 @@
             for (n=0;n<pitchforks.length;n++){
               if (check==pitchforks[n]&&check!=""){isDuplicate=1; no[n]++; break;}
             }
-            if (check!=""){tot++;}
-            else {isDuplicate=1;}
+            if (check==""){isDuplicate=1;}
             if (isDuplicate==0){
               pitchforks.push(check);
               info.push(sessionStorage.getItem("info"+i));
