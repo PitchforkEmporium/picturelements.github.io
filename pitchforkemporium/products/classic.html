@@ -80,6 +80,7 @@
     if (items==null){items=0;}
     var pitchforks=["---E","Ǝ---","---{"];
     var names=["Traditional Pitchfork","Left Handed Pitchfork","Fancy Pitchfork"];
+    var countries=["Germany","Mexico","North Korea","Romania","Vietnam","Italy"];
     var ids=["CL - PF001","CL - PF002","CL - PF003"];
     var descs=["The traditional pitchfork! As seen in \"Frankenstein's monster\", \"Shrek\", and many comment sections of OP's submissions! This pitchfork is versatile and simple, and compatible with all OS and browsers, even IE!<br><br>Tip: Buy a <a onclick=moar(1)>left-handed one</a> as well! Twice the chance of getting OP!",
       "Let those left-handed people join in on the hate! Don't hinder anyone from getting OP! It's a basic human right to heckle those who have done wrong and reposted stuff from the top 10 most popular posts.<br><br>Tip: Buy a <a onclick=moar(0)>right-handed one</a> as well! Twice the chance of getting OP!",
@@ -109,6 +110,7 @@
       document.getElementById("tLength").innerHTML=""+pitch.length*43.52+" in";
       document.getElementById("tWeight").innerHTML=""+Math.floor(pitch.length*43.52*17)/1000.0+" kg";
       document.getElementById("tWarranty").innerHTML=""+(sum%7+2)+" yrs";
+      document.getElementById("tCountry").innerHTML=countries[sum%7];
     }
     
     function moar(inID){
@@ -180,6 +182,10 @@
               <tr>
                 <th>Warranty</th>
                 <td id="tWarranty">JS disabled</td>
+              </tr>
+              <tr>
+                <th>Country</th>
+                <td id="tCountry">JS disabled</td>
               </tr>
             </table>
             <div id="crtBtn" style="position:absolute; font-family:Roboto,Arial,sans-serif; bottom:2vw; right:2vw; cursor:pointer; z-index:100; width: 16.5vw; height: 3vw; line-height: 3vw; font-size: 2vw; text-align: center;" onclick=setCart()>Add to cart</div>
