@@ -39,7 +39,7 @@
             outStr+="<tr><td>"+pitchforks[i]+"</td><td>"+info[i]+"</td><td>"+sum+" karma</td><td>"+no[i]+"</td><td>"+sum*no[i]+" karma</td></tr>";
             totSum+=sum*parseInt(no[i]);
           }
-          outStr+="</table><br><br><table><tr><th>Total quantity</th><th>Grand total</th></tr><tr><td>"+items+"</td><td>"+totSum+"</td></tr></table>";
+          outStr+="</table><br><br><table><tr><th>Total quantity</th><th>Grand total</th></tr><tr><td>"+tot+"</td><td>"+totSum+"</td></tr></table>";
           document.getElementById("displayBox").innerHTML=outStr;
         }
       }
