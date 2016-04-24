@@ -146,8 +146,8 @@
       items++;
       sessionStorage.setItem("items",items);
       document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
-      document.getElementByClassName("add").style.width="19.4vw";
-      document.getElementByClassName("add").style.right="7vw";
+      document.getElementsByClassName("add")[0].style.width="19.4vw";
+      document.getElementsByClassName("add")[0].style.right="7vw";
       setItems(idFull);
     }
   </script>
