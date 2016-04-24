@@ -13,6 +13,7 @@ body{
   font-family:Kaushan Script,Arial,sans-serif;
   font-weight:bold;
   font-size:7.5vw;
+  border-bottom: 5px solid #9A0101;
 }
 
 #name a{
@@ -44,6 +45,7 @@ body{
   text-align:center;
   color:#eee;
   font-family:Roboto,sans-serif;
+  border-top: 5px solid #9A0101;
 }
 
 inner{
