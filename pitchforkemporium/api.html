@@ -12,7 +12,10 @@
           $.each(
             data.data.children.slice(0, 10),
             function (i, post) {
-              $("#reddit-content").append( '<br>' + user.data.karma );
+ -              $("#reddit-content").append( '<br>' + post.data.url );
+ -              $("#reddit-content").append( '<br>' + post.data.permalink );
+ -              $("#reddit-content").append( '<br>' + post.data.ups );
+ -              $("#reddit-content").append( '<br>' + post.data.downs );
               $("#reddit-content").append( '<hr>' );
             }
           )
