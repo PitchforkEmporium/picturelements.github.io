@@ -7,7 +7,8 @@
       function getKarma(){
         var karma;
         var user=document.getElementById("input").value;
-        var url="http://www.reddit.com/user/"+user+"/about.json?jsonp=?";
+        //var url="http://www.reddit.com/user/"+user+"/about.json?jsonp=?";
+        var url="http://www.reddit.com/api/v1/me/about.json?jsonp=?";
         $(function(){
           $.getJSON(url,
           function(data){
