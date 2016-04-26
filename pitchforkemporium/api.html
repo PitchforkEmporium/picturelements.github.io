@@ -1,23 +1,9 @@
 <html>
   <head>
-    <script src="http://j.mp/jqymin">
-    function getKarma(){
-      var karma;
-      var user=document.getElementById("input").value;
-      var url="http://www.reddit.com/user/"+user+"/about.json?jsonp=?";
-      $(function(){
-        $.getJSON(url,
-        function(data){
-            karma=data.data.comment_karma;
-            document.getElementById("display").innerHTML=karma;
-            console.log(data);
-          });
-      });
-    }
-  </script>
+    <script src="http://j.mp/jqymin"></script>
   </head>
   <body style="font-family:Trebuchet MS,sans-serif">
-    <script>
+    <!--<script>
       /*var karma; 
       $(function(){
         $.getJSON('http://www.reddit.com/user/PicturElements/about.json?jsonp=?',
@@ -27,6 +13,21 @@
             console.log(data);
           });
       });*/
+    </script>-->
+    <script>
+      function getKarma(){
+        var karma;
+        var user=document.getElementById("input").value;
+        var url="http://www.reddit.com/user/"+user+"/about.json?jsonp=?";
+        $(function(){
+          $.getJSON(url,
+          function(data){
+              karma=data.data.comment_karma;
+              document.getElementById("display").innerHTML=karma;
+              console.log(data);
+            });
+        });
+      }
     </script>
     <div id="display" style="width:100%; height:300px; top:50%; margin-top:-150px; line-height:300px; font-size:200px; text-align:center; display:block; position:fixed;">API!</div>
     <input id="input"; style="display:block; position:fixed; width:200px; height:40px; left:50%; margin-left:-125px; font-size:30px; bottom:20px;"></input>
