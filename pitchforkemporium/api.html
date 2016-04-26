@@ -1,20 +1,18 @@
 <html>
   <head>
-    <script src="http://j.mp/jqymin"></script>
-  </head>
-  <body>
-    <div id="reddit-content"></div>
-    <script>
+    <script src="http://j.mp/jqymin">
+      var karma; 
       $(function(){
           $.getJSON('http://www.reddit.com/user/PicturElements/about.json?jsonp=?',
           function(data){
-              $("#reddit-content").append("Lol: "+data.data);
-              $("#reddit-content").append("Lol: "+data.comment_karma);
-              $("#reddit-content").append("<br>Lol: "+data.data.comment_karma);
+              karma=data.data.comment_karma;
+              document.getElementById("display").innerHTML=karma;
               console.log(data);
           });
       });
     </script>
+  </head>
+  <body>
     <div id="display" style="width:100%; height:500px; line-height:500px; font-size:200px; text-align:center;">API!</div>
   </body>
 </html>
