@@ -8,12 +8,13 @@
         var karma;
         var user=document.getElementById("input").value;
         //var url="http://www.reddit.com/user/"+user+"/about.json?jsonp=?";
-        var url="http://www.reddit.com/api/v1/me.json?jsonp=?";
+        //var url="http://www.reddit.com/api/v1/me.json?jsonp=?";
+        var url="https://www.reddit.com/api/v1/authorize?client_id=CLIENT_ID&response_type=TYPE&state=RANDOM_STRING&redirect_uri=URI&duration=DURATION&scope=SCOPE_STRING";
         $(function(){
           $.getJSON(url,
           function(data){
-              karma=data.data.comment_karma;
-              document.getElementById("display").innerHTML=karma;
+              //karma=data.data.comment_karma;
+              //document.getElementById("display").innerHTML=karma;
               console.log(data);
             });
         });
