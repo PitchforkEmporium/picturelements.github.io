@@ -1,6 +1,9 @@
 <html>
   <head>
-    <script src="http://j.mp/jqymin">
+    <script src="http://j.mp/jqymin"></script>
+  </head>
+  <body>
+    <script>
       var karma; 
       $(function(){
           $.getJSON('http://www.reddit.com/user/PicturElements/about.json?jsonp=?',
@@ -11,8 +14,6 @@
           });
       });
     </script>
-  </head>
-  <body>
     <div id="display" style="width:100%; height:500px; line-height:500px; font-size:200px; text-align:center;">API!</div>
   </body>
 </html>
